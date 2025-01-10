@@ -1,3 +1,5 @@
+@import "constants.css";
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -11,9 +13,9 @@ body {
   font-variation-settings: "wdth" 100;
 }
 
-div.header {
-  padding: 0px 128px;
-  background-color: #1f2937;
+.header {
+  padding: 0px var(--page-padding);
+  background-color: var(--dark-background-color);
 }
 
 nav {
@@ -35,7 +37,7 @@ nav {
 .nav-title {
   font-weight: bolder;
   font-size: 24px;
-  color: #f9faf8;
+  color: var(--header-color);
 }
 
 .nav-item {
@@ -53,7 +55,7 @@ div.hero {
 p.hero-main {
   font-size: 48px;
   font-weight: 900;
-  color: #f9faf8;
+  color: var(--header-color);
 }
 
 p.hero-secondary {
@@ -62,8 +64,9 @@ p.hero-secondary {
   margin-bottom: 16px;
 }
 
-button.sign-up {
-  background-color: #3882f6;
+.sign-up,
+.call-to-action-sign-up {
+  background-color: var(--accent-color);
   color: white;
   padding: 8px 16px;
   border: none;
@@ -71,4 +74,97 @@ button.sign-up {
   box-shadow: none;
   font-size: 18px;
   font-weight: bold;
+}
+
+.information-container {
+  padding: 64px var(--page-padding);
+}
+
+.information-header {
+  font-size: 36px;
+  font-weight: 900;
+  color: var(--dark-background-color);
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+.photo-tray {
+  display: flex;
+  justify-content: space-around;
+}
+
+figure {
+  width: 200px;
+  height: 200px;
+  border-radius: 16px;
+  border-style: solid;
+  border-width: 3px;
+  border-color: var(--accent-color);
+  margin: auto auto 16px auto;
+}
+
+figcaption {
+  text-align: center;
+  color: #1f2937;
+}
+
+.quote-container {
+  background-color: #e5e7eb;
+  padding: 128px var(--page-padding);
+}
+
+.quote-text {
+  font-size: 36px;
+  font-weight: 300;
+  font-style: italic;
+  color: #1f2937;
+  text-align: center;
+}
+
+.quote-signature {
+  text-align: end;
+  font-weight: bold;
+  font-size: 24px;
+  color: #1f2937;
+}
+
+.call-to-action-modal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--accent-color);
+  width: 80%;
+  height: 180px;
+  margin: auto;
+  gap: 32px;
+  border-radius: 16px;
+}
+
+.call-to-action-container {
+  padding: 32px var(--page-padding);
+}
+
+.call-to-action-header {
+  font-size: 24px;
+  color: #f9faf8;
+}
+
+.call-to-action-sign-up {
+  border: 3px;
+  border-style: solid;
+  border-color: white;
+}
+
+.call-to-action-detail {
+  font-size: 18px;
+  color: #e5e7eb;
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 64px;
+  background-color: var(--dark-background-color);
+  color: #e5e7eb;
 }
